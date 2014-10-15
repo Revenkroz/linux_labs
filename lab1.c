@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <sys/stat.h>
 #include <time.h>
-#include <stdint.h> 
  
 
 void fileType(int dtype) {
