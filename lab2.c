@@ -41,7 +41,7 @@ int main()
 	time_t timer;
 	time(&timer);
 	double elapsedTime = difftime(timer, mktime(currentTime));
-	printf("Processes generated in %.f seconds. \n\n", elapsedTime);
+	printf("\n%d processes generated in %.f seconds. \n\n", i+1, elapsedTime);
 
 	return 0;
 }
