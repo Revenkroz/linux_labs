@@ -9,7 +9,7 @@
 int main(int argc, char const *argv[])
 {
 	int status, shmid;
-	char *shm, *str, *time_temp;
+	char *shm;
 
 	time_t childTime, pTime;
 
