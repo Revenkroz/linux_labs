@@ -36,8 +36,8 @@ int main()
 			read(fd[0], buf, sizeof(buf));
 			close(fd[0]);
 			wait(&status);
-			printf("Child process (PID %d) created at: %s\n", getpid(), buf);
-			printf("Parent process created at: %s\n", ctime(&pTime));
+			printf("Child process (PID %d) was created at: %s\n", getpid(), buf);
+			printf("Parent process was created at: %s\n", ctime(&pTime));
 	}
 
 	return 0;

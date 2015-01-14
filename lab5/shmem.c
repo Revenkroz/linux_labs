@@ -47,8 +47,8 @@ int main(int argc, char const *argv[])
 
 			wait(&status);
 
-			printf("Parent process created at: %s\n", ctime(&pTime));
-			printf("Child process created at: %s\n", shm);
+			printf("Parent process was created at: %s\n", ctime(&pTime));
+			printf("Child process was created at: %s\n", shm);
 
 			shmdt(shm);
 	}
