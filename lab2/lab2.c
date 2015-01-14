@@ -13,11 +13,8 @@ int main()
 {
 	struct tm *currentTime;
 	getTime(&currentTime);
-	// printf("Current Hour: %d\n", currentTime->tm_hour);
 
 	int processesNum = (int) pow(2, currentTime->tm_hour);
-	// int processesNum = 8832;
-	// printf("%d\n", processesNum);
 
 	pid_t pid;
 	int status;
