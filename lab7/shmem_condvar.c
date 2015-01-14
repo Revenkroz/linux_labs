@@ -14,7 +14,7 @@ struct thread_data{
 	pthread_cond_t *cond_ptr;
 };
 
-void *thread_func(void *this_data)
+void *second_thread(void *this_data)
 {
 	time_t childTime;
 	char *shm;
@@ -74,7 +74,7 @@ int main(int argc, char const *argv[])
 	data.mutex_ptr = &mutex;
 	data.cond_ptr = &cond_var;
 
-	if(pthread_create(&thid, NULL, thread_func, &data) == 0) {
+	if(pthread_create(&thid, NULL, second_thread, &data) == 0) {
 		time(&pTime);
 
 		sleep(1);

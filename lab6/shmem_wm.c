@@ -8,12 +8,12 @@
 #include <pthread.h>
 #include <fcntl.h>
 
-struct thread_data{
+struct thread_data {
 	int shmid;
 	pthread_mutex_t *mutex_ptr;
 };
 
-void *thread_data(void *this_data)
+void *second_thread(void *this_data)
 {
 	time_t childTime;
 	char *shm;
@@ -67,7 +67,7 @@ int main(int argc, char const *argv[])
 	data.mutex_ptr = &mutex;
 	data.shmid = shmid;
 
-	if(pthread_create(&thid, NULL, thread_data, &data) == 0){
+	if(pthread_create(&thid, NULL, second_thread, &data) == 0){
 		time(&pTime);
 
 		sleep(1);
